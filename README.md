@@ -1,73 +1,114 @@
-# Welcome to your Lovable project
+🧠 Sovereign AI Twin
+Your AI, Your Data, Your Identity.
+A full-stack decentralized application (dApp) that allows you to create a hyper-personalized AI agent that learns from your own data. This project uses blockchain to ensure you have provable ownership and sovereign control over your AI twin's identity and memory.
 
-## Project info
+✨ About The Project
+Project Synapse is a tool for augmented self-reflection. It moves beyond simple chatbots by creating a "digital twin" of your mind. By ingesting your personal writings, notes, and journals, it learns your unique communication style, knowledge, and values.
 
-**URL**: https://lovable.dev/projects/a0f9c7e2-f97d-4002-99a1-4ca29e39ef05
+You can then interact with this twin to:
 
-## How can I edit this code?
+Get Advice: Analyze complex decisions through a lens that reflects your own thinking process.
 
-There are several ways of editing your application.
+Brainstorm Ideas: Generate creative concepts that are tailored to your specific tastes and past work.
 
-**Use Lovable**
+Draft Communications: Autopilot difficult emails or messages in your own authentic voice.
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/a0f9c7e2-f97d-4002-99a1-4ca29e39ef05) and start prompting.
+The core innovation is the integration of blockchain to solve a critical problem of the AI era: data ownership. With Synapse, you don't just use your AI twin; you own it, provably and securely, on a public blockchain.
 
-Changes made via Lovable will be committed automatically to this repo.
+🚀 Key Features
+Decentralized Identity: Secure, password-less login using your Ethereum wallet via Sign-In with Ethereum (SIWE).
 
-**Use your preferred IDE**
+AI Memory Ingestion: Upload text data to be processed, converted into vector embeddings, and stored in a secure vector database.
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+On-Chain Ownership: A smart contract registers your wallet as the sole owner of your AI twin's identity.
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+Immutable Memory Log: A cryptographic hash of new data is stored on-chain, creating a permanent, verifiable audit trail of your twin's cognitive development.
 
-Follow these steps:
+Retrieval-Augmented Generation (RAG): The AI retrieves your most relevant "memories" before answering a query, enabling it to think and respond in a style that reflects your own data.
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+Conversational Interface: A sleek, modern chat interface for conversing with your AI twin.
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+🛠️ Technology Stack
+Framework: Next.js (App Router)
 
-# Step 3: Install the necessary dependencies.
-npm i
+Frontend: React, TypeScript, Tailwind CSS
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+Blockchain:
+
+Smart Contract: Solidity
+
+Development Environment: Hardhat
+
+Frontend Connectivity: Wagmi, Viem, Ethers.js
+
+AI & Data:
+
+AI Model: Google Gemini API (Text Generation & Embeddings)
+
+Vector Database: Pinecone
+
+Decentralized Storage: IPFS (via Pinata)
+
+🏁 Getting Started
+To get a local copy up and running, follow these simple steps.
+
+Prerequisites
+Node.js & npm (or yarn/pnpm)
+
+An Ethereum wallet (e.g., MetaMask)
+
+API keys for:
+
+Google AI (Gemini)
+
+Pinecone
+
+Pinata
+
+An RPC Provider like Alchemy or Infura
+
+Installation & Setup
+Clone the repository:
+
+git clone https://github.com/your-username/sovereign-ai-twin.git
+cd sovereign-ai-twin
+
+Install dependencies:
+
+npm install
+
+Set up environment variables:
+
+Copy the .env.example file to a new file named .env.
+
+Fill in your API keys and your wallet's private key for deployment.
+
+cp .env.example .env
+
+Compile the smart contract:
+
+npx hardhat compile
+
+Deploy the smart contract to a test network:
+
+Make sure your wallet has some Sepolia test ETH from a faucet.
+
+npx hardhat run scripts/deploy.ts --network sepolia
+
+Copy the deployed contract address and save it for your frontend configuration.
+
+Run the development server:
+
 npm run dev
-```
 
-**Edit a file directly in GitHub**
+Open http://localhost:3000 with your browser to see the result.
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+📖 Usage
+Connect Your Wallet: Use the "Connect Wallet" button to sign in.
 
-**Use GitHub Codespaces**
+Add Memories: Navigate to the "Add Memory" tab. Paste text from your notes or journals and click "Commit to Memory" to ingest the data into your twin's knowledge base.
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+Converse: Switch to the "Chat" tab. Ask your twin questions, pose scenarios, or ask for advice. The AI will use your ingested memories to formulate a response in your own style.
 
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/a0f9c7e2-f97d-4002-99a1-4ca29e39ef05) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+⚖️ License
+Distributed under the MIT License. See LICENSE.txt for more information.
