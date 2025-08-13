@@ -70,7 +70,7 @@ An RPC Provider like Alchemy or Infura
 Installation & Setup
 Clone the repository:
 
-git clone https://github.com/your-username/sovereign-ai-twin.git
+git clone https://github.com/Gsjskskkudjd/sovereign-ai-twin.git
 cd sovereign-ai-twin
 
 Install dependencies:
